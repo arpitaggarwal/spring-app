@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <html>
-<link rel="stylesheet" href="../<spring:theme code="css"/>"
+<link rel="stylesheet" href="/static/<spring:theme code="css"/>"
 	type="text/css" />
 </head>
 <body>

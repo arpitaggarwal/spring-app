@@ -83,11 +83,11 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
 	}
 
 	// Default Servlet Handler
-	@Override
+	/*@Override
 	public void configureDefaultServletHandling(
 			DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
-	}
+	}*/
 
 	// Used to access CSS resource
 	// @Override
