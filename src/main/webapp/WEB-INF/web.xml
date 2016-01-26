@@ -39,4 +39,22 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+
+	<!-- Spring Security’s web infrastructure is based entirely on standard 
+		servlet filters. Filter classes are also Spring beans defined in the application 
+		context and thus able to take advantage of Spring’s rich dependency-injection 
+		facilities and lifecycle interfaces. Spring’s DelegatingFilterProxy provides 
+		the link between web.xml and the application context. -->
+
+	<!-- http://brian-hurley.com/spring-security-really-work/ -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
 </web-app>
